@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/courrier/static/css/main.a115a57c.css",
+    "main.js": "/courrier/static/js/main.9e2bc825.js",
+    "static/media/Logo_ofppt.png": "/courrier/static/media/Logo_ofppt.30e952b982315a771ee8.png",
+    "index.html": "/courrier/index.html",
+    "main.a115a57c.css.map": "/courrier/static/css/main.a115a57c.css.map",
+    "main.9e2bc825.js.map": "/courrier/static/js/main.9e2bc825.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a115a57c.css",
+    "static/js/main.9e2bc825.js"
+  ]
+}
