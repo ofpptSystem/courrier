@@ -1,0 +1,237 @@
+/* Scrollbar Styling (Webkit Browsers) */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* For Firefox */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+/* Custom Scrollbar Styles */
+ul {
+  max-height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #e0e0e0;
+}
+
+ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-track {
+  background-color: #e0e0e0;
+}
+
+.navbar-holder {
+  width: 100%;
+  background-color: #f8f9fa; /* Light background for navbar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.navbar-holder .active-nav-element {
+  background-color: white;
+  color: #218838;
+}
+.navbar-holder .active-nav-element:hover {
+  color: white;
+}
+.profile .name {
+  color: #343a40; /* Dark gray for profile name */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.2rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile img {
+  width: 55px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid #28a745; /* Green border for profile image */
+}
+
+.profile span {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #343a40; /* Dark gray for profile text */
+}
+.profile.active {
+  rotate: 45deg;
+}
+.logout {
+  color: #dc3545; /* Red logout */
+  cursor: pointer;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.logout:hover {
+  color: #bd2130; /* Darker red */
+}
+
+.options {
+  display: flex;
+  gap: 0.05rem;
+}
+
+.options button {
+  background-color: #28a745; /* Green buttons */
+  color: #ffffff; /* White text on green */
+  border: none;
+  border-radius: 5px;
+  border: 2px solid #28a745;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease; /* Add box-shadow transition */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Subtle shadow on buttons */
+}
+
+.options button:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+.options button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Shadow back to normal on active */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff; /* White dropdown background */
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  min-width: 160px;
+  padding: 5px;
+}
+
+.dropdown-content button {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  background-color: transparent; /* Transparent button background */
+  border: none;
+  border-radius: 5px;
+  color: #343a40; /* Dark gray text in dropdown */
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Added color transition */
+  margin-top: 4px;
+}
+
+.dropdown-content button:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+  color: #007bff; /* Blue text on hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.mobile-menu-icon {
+  display: none;
+  color: #343a40; /* Dark gray for mobile menu icon */
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+  }
+  .dropdown {
+    margin: 0;
+  }
+  .options {
+    display: none;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 200px;
+    background-color: #1e293b;
+    border-radius: 5px;
+    padding: 1rem;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    z-index: 999;
+  }
+
+  .options.open {
+    display: flex;
+  }
+
+  .profile {
+    justify-content: space-between;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .dropdown-content {
+    position: static;
+    display: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+}
